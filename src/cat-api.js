@@ -6,6 +6,7 @@ axios.defaults.headers.common['x-api-key'] =
 const catInfo = document.querySelector('.cat-info');
 const loader = document.querySelector('.loader');
 const failure = document.querySelector('.error');
+let chosenCatInfo;
 
 function fetchBreeds() {
   loader.classList.remove('invisible');
@@ -27,4 +28,4 @@ function fetchCatByBreed(breedId) {
     });
 }
 
-export { fetchBreeds, fetchCatByBreed, chosenCatInfo };
+export { fetchBreeds, fetchCatByBreed };
