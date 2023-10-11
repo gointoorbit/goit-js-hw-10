@@ -11,9 +11,7 @@ const breedSelect = new SlimSelect({
   select: '.breed-select',
   events: {
     afterChange: data => {
-      console.log(data);
       const breedId = data[0].value;
-      console.log(breedId);
       fetchCatByBreed(breedId)
         .then(response => {
           loader.classList.add('invisible');
